@@ -2,11 +2,11 @@
     "name": "social-media-nosql-api",
     "version": "1.0.1",
     "description": "Mongoose back-end project for a simple social media application.",
-    "main": "index.js",
+    "main": "server.js",
     "license": "MIT",
     "scripts": {
-      "start": "node index",
-      "dev": "nodemon index",
+      "start": "node server.js",
+      "watch": "nodemon server.js",
       "seed": "node utils/seed"
     },
     "dependencies": {
