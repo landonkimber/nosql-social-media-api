@@ -7,7 +7,8 @@ const postSchema = new mongoose.Schema({
     },
     postContent: {
         type: String,
-        required: true
+        required: true,
+        length: { min: 1, max: 280 },
     },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
@@ -19,7 +20,11 @@ const postSchema = new mongoose.Schema({
     reactions: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Reaction'
-    }]
+    }],
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    }
 });
 
 const Post = mongoose.model('post', postSchema);

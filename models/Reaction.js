@@ -11,6 +11,10 @@ const reactionSchema  = new mongoose.Schema({
         ref: 'Post',
         required: true
     },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
 });
 
 const Reaction = mongoose.model('reaction', reactionSchema);

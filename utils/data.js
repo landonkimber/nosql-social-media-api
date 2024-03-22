@@ -150,6 +150,7 @@ const getRandomPost = () => {
 const getRandomUser = () => {
   let users = {
       username: getRandomArrItem(namesArr),
+      email: `${getRandomArrItem(namesArr)}@email.com`,
       posts: getRandomPost()
   };
 
@@ -157,4 +158,4 @@ const getRandomUser = () => {
 }
 //DISPLAY STUFF
 // console.log('data.js getRandomUsers')
-module.exports = { getRandomUser , getRandomPost, getRandomReaction};
+module.exports = { getRandomUser};

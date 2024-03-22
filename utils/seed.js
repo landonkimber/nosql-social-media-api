@@ -16,6 +16,7 @@ connection.once('open', async () => {
     const userData = getRandomUser();
     const user = new User({
       username: userData.username,
+      email: userData.email,
       posts: []
     });
     await user.save();
