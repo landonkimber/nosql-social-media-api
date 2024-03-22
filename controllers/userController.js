@@ -64,13 +64,4 @@ module.exports = {
             res.status(500).json(err);
         }
     },
-    async viewUserFriends(req, res) {
-        try {
-            const userData = await User.findById(req.params.id).populate('friends');
-            res.json(userData);
-        } catch (err) {
-            console.log(err);
-            res.status(500).json(err);
-        }
-    }
 }
